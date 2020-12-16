@@ -1,0 +1,326 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+   <!-- Meta Tags -->
+   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <meta name="description" content="India's Best Ayurvedic medicine for Diabetes Treatment" />
+   <meta name="keywords" content="Diabetes, BKArogyam, healthcare, Ayurveda, Mission Arogyam, psychology" />
+   <meta name="author" content="ThemeMascot" />
+   <!-- Page Title -->
+   <title>
+      {% block title %}
+      {% endblock title %}
+   </title>
+   <!-- Favicon and Touch Icons -->
+   <link href="{% static 'images/cancer/favicon/favicon.png' %}" rel="shortcut icon" type="image/png">
+   <!-- Stylesheet -->
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+   <link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet" type="text/css">
+   <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css">
+   <link href="{% static 'css/css-plugin-collections.css' %}" rel="stylesheet" />
+   <!-- CSS | menuzord megamenu skins -->
+   <link id="menuzord-menu-skins" href="{% static 'css/menuzord-skins/menuzord-rounded-boxed.css' %}"
+      rel="stylesheet" />
+   <!-- CSS | Main style file -->
+   <link href="{% static 'css/style-main.css' %}" rel="stylesheet" type="text/css">
+   <!-- CSS | Preloader Styles -->
+   <link href="{% static 'css/preloader.css' %}" rel="stylesheet" type="text/css">
+   <!-- CSS | Custom Margin Padding Collection -->
+   <link href="{% static 'css/custom-bootstrap-margin-padding.css' %}" rel="stylesheet" type="text/css">
+   <!-- CSS | Responsive media queries -->
+   <link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css">
+   <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+   <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+   <!-- Revolution Slider 5.x CSS settings -->
+   <link href="{% static 'js/revolution-slider/css/settings.css' %}" rel="stylesheet" type="text/css" />
+   <link href="{% static 'js/revolution-slider/css/layers.css' %}" rel="stylesheet" type="text/css" />
+   <link href="{% static 'js/revolution-slider/css/navigation.css' %}" rel="stylesheet" type="text/css" />
+   <!-- CSS | Theme Color -->
+   <link href="{% static 'css/colors/theme-skin-green.css' %}" rel="stylesheet" type="text/css">
+   <!-- Footer Scripts -->
+   <!-- external javascripts -->
+   <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+   <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   <!-- JS | jquery plugin collection for this theme -->
+   <script src="{% static 'js/jquery-plugin-collection.js' %}"></script>
+   <!-- Revolution Slider 5.x SCRIPTS -->
+   <script src="{% static 'js/revolution-slider/js/jquery.themepunch.tools.min.js' %}"></script>
+   <script src="{% static 'js/revolution-slider/js/jquery.themepunch.revolution.min.js' %}"></script>
+   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body class="">
+   <div id="wrapper" class="clearfix">
+      <!-- preloader -->
+      <!-- <div id="preloader">
+            <div id="spinner">
+              <img class="floating ml-5 mb-5" src="images/preloaders/13.png" alt="">
+              <h5 class="line-height-50 font-18">Loading...</h5>
+            </div>
+            <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
+            </div>-->
+      <!-- Header -->
+      <header id="header" class="header">
+         <div class="header-top bg-black-333 sm-text-center border-top-theme-color-3px p-0">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="widget no-border m-0">
+
+                     </div>
+                  </div>
+                  <div class="col-md-6 pr-0">
+                     <div class="widget no-border">
+                        <ul class="list-inline pull-right flip sm-pull-none xs-text-center text-white mt-5">
+                           <li class="m-0 pl-10 pr-10"> <a href="#" class="text-white"><i
+                                    class="fa fa-phone text-theme-colored"></i> +91 8081222333</a> </li>
+                           <li class="m-0 pl-10 pr-10"> <i class="fa fa-clock-o text-theme-colored"></i> Mon-Sun 10:00
+                              to 7:00 </li>
+                           <li class="m-0 pl-10 pr-10">
+                              <a href="#" class="text-white"><i class="fa fa-envelope-o text-theme-colored"></i>
+                                 doctor@bkarogyam.com</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-2">
+                     <a class="btn btn-colored btn-flat btn-theme-colored pb-10" data-toggle="modal"
+                        data-target="#myModal">Register</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-nav">
+            <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
+               <div class="container">
+                  <nav id="menuzord-right" class="menuzord default">
+                     <a class="menuzord-brand pull-left flip xs-pull-center" href="http://127.0.0.1:8000/cancercare/">
+                        <img src="{% static 'images/cancer/websitelogo/bklogo.png' %}" alt="">
+                     </a>
+                     <ul class="menuzord-menu">
+                        <li class="active"><a href="http://127.0.0.1:8000/cancercare/">Cancer Care</a>
+                        </li>
+                        <li>
+                           <a href="/cancercare/disease">Diseases</a>
+                           <ul class="dropdown">
+                              <li><a href="#">Kidney cancer</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/breastcancer/">Breast caner</a></li>
+                              <li><a href="#">Mouth cancer</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/prostate/">Prostate cancer</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/skin/">Skin cancer</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/basalcancer/">Basal cell cancer</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/coloncancer/">Colon cancer</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/lungcancer/">Lung cancer</a></li>
+                              <li><a href="#">Lymphoma</a></li>
+                              <li><a href="#">Leukemia</a></li>
+                              <li><a href="#">Bladder cancer</a></li>
+                              <li><a href="#">Thyroid cancer</a></li>
+                              <li><a href="#">Pancreatic cancer</a></li>
+                              <li><a href="#">Uterine cancer</a></li>
+                              <li><a href="#">Colorectal cancer</a></li>
+                              <li><a href="#">Melanoma</a></li>
+
+
+
+
+                           </ul>
+
+                        <li><a href="/cancercare/blog/">Blog</a>
+                           <ul class="dropdown">
+                              <li><a href="http://127.0.0.1:8000/cancercare/singlepost1/">Is there any cancer treatment?</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/singlepost2/">What is the cause of cancer?</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/singlepost3/">Diet of cancer treatment</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/singlepost4/">What is the signs and symptoms of cancer?</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/singlepost5/">Safety of Ayurvedic Medicine in Cancer</a></li>
+
+
+                           </ul>
+
+                        </li>
+                        </li>
+                        <li><a href="https://www.bkarogyam.com/product">Product</a>
+                        </li>
+                        <li>
+                           <a href="#brands">Brands</a>
+                           <ul class="dropdown">
+                              <li><a href="http://127.0.0.1:8000/cancercare/#brands">Arogyaveda</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/#brands">Rupam</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/#brands">Nutriveda</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/#brands">Muscleveda</a></li>
+                              <li><a href="http://127.0.0.1:8000/cancercare/#brands">Kayopachar</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="/event/">Events</a>
+                        </li>
+                        </li>
+                        </li>
+                        </li>
+                        <li>
+                           <a href="/cancercare/video/">Videos</a>
+                        </li>
+                        <li><a href="/cancercare/download" target="_blank">Download</a>
+                        </li>
+                        <li>
+                           <a href="/cancercare/contact/">Contact Us</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      {% block body %}
+
+      {% endblock body %}
+      <!-- Footer -->
+      <footer id="footer" class="footer pb-0" data-bg-img="../static/images/footer-bg.png" data-bg-color="#25272e"
+         style="background-image: url(&quot;images/footer-bg.png&quot;); background-position: initial !important; background-size: initial !important; background-repeat: initial !important; background-attachment: initial !important; background-origin: initial !important; background-clip: initial !important; background-color: rgb(37, 39, 46) !important;">
+         <div class="container pt-60 pb-30">
+            <div class="row">
+               <div class="col-sm-6 col-md-3">
+                  <div class="widget mb-20">
+                     <img alt="" src="{% static 'images/cancer/footerlogo/Bk cancer care.png' %}" style="height:100px">
+                     <p class="font-12 mt-15 mb-10" style=color:#fff> Cancer is a dangerous disease in which the body cells grow rapidly and become out-of-control and also invade other tissues. Cells become cancerous due to the accumulation of defects, or mutations, etc. Most of the time in the human body, cells are able to detect and repair DNA damage themselves. Cancer usually occurs when cells are damages, grow and divide and spread in the body rather than self-destructing as they should do.  </p>
+                     <a class="btn btn-default btn-transparent btn-xs btn-flat mt-5" style=color:#fff href="#">Read
+                        more</a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="widget dark">
+                     <h5 class="widget-title line-bottom" style="border-color:#fff">Brands</h5>
+                     <ul class="list list-divider list-border">
+                        <li style="border-color:#fff"><a href="#" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> Arogyam</a></li>
+                        <li style="border-color:#fff"><a href="#" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> Kaypachr</a></li>
+                        <li style="border-color:#fff"><a href="#" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> Rupam</a></li>
+                        <li style="border-color:#fff"><a href="#" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> Nutiveda</a></li>
+                        <li style="border-color:#fff"><a href="#" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> Muscleveda</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="widget dark">
+                     <h5 class="widget-title line-bottom" style="border-color:#fff">Services</h5>
+                     <ul class="list list-divider list-border">
+                        <li style="border-color:#fff"><a href="http://127.0.0.1:8000/kidneycare/" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> BK Kidney Care</a></li>
+                        <li style="border-color:#fff"><a href="http://127.0.0.1:8000/diabetescare/" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> BK Diabeties Care</a></li>
+                        <li style="border-color:#fff"><a href="http://127.0.0.1:8000/heartcare/" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> BK Heart Care</a></li>
+                        <li style="border-color:#fff"><a href="#" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> Immunitey Booster</a></li>
+                        <li style="border-color:#fff"><a href="http://127.0.0.1:8000/cancercare/" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> BK Cancer Care</a></li>
+                        <li style="border-color:#fff"><a href="#" style=color:#fff><i
+                                 class="fa fa-check-square-o mr-10 text-black-light"></i> Kaya Mantra</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="widget dark">
+                     <h5 class="widget-title line-bottom" style="border-color:#fff">Quick Contact</h5>
+                     <ul class="list list-border">
+                        <li style="border-color:#fff"><a href="#" style=color:#fff>+91 8081222333</a></li>
+                        <li style="border-color:#fff"><a href="#" style=color:#fff>docter@bkarogyam.com</a></li>
+                        <li style="border-color:#fff"><a href="#" class="lineheight-20" style=color:#fff>D 59/103-Q6 Opp
+                              Sheetla Mata Mandir, Sigra, Varanasi, Uttar Pradesh 22100</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid bg-theme-colored p-20">
+            <div class="row text-center">
+               <div class="col-md-12">
+                  <p class="text-white font-11 m-0">©2020 BKArogyam and Research Pvt Ltd. All Rights Reserved</p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Advisor Register</h4>
+               </div>
+               <div class="modal-body">
+                  <form id="reservation_form_popup" class="reservation-form" method="post">
+                     <h3 class="mt-0 line-bottom mb-40">Enquiry Now </h3>
+                     {% csrf_token %}
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="form-group mb-30">
+                              <input placeholder="Enter Name" type="text" id="reservation_name" name="name" required=""
+                                 class="form-control">
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="form-group mb-30">
+                              <input placeholder="Email" type="text" id="reservation_email" name="email"
+                                 class="form-control" required="">
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="form-group mb-30">
+                              <input placeholder="Phone" type="text" id="reservation_phone" name="mobileno"
+                                 class="form-control" required="">
+                           </div>
+                        </div>
+                        <div class="col-sm-12">
+                           <div class="form-group">
+                              <textarea name="form_message" class="form-control required" name="messages" rows="5"
+                                 placeholder="Enter Message"></textarea>
+                           </div>
+                        </div>
+                        <div class="col-sm-12">
+                           <div class="form-group mb-0 mt-0">
+                              <input name="form_botcheck" class="form-control" type="hidden" value="">
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 <button type="submit" class="btn btn-dark btn-flat">Enquiry Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.actions.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.migration.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+   <script type="text/javascript"
+      src="{% static 'js/revolution-slider/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+   <body>
+
+</html>

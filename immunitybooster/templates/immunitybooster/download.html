@@ -1,0 +1,70 @@
+{% extends "immunitybooster/base.html" %} 
+{% block title%}
+Download | Mission Arogyam | BK Arogyam
+{% endblock %}
+{% block body %}
+{% load static %}
+<script type="text/javascript">
+function openPdf()
+{
+var omyFrame = document.getElementById("myFrame");
+omyFrame.style.display="block";
+omyFrame.target ="_blank"
+omyFrame.src = "{% static 'pdf/DataScientistMastersProgram.pdf' %}";
+}
+</script>
+
+<div class="main-content">
+
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{% static 'images/immunitybooster/pdf/background/bg.jpg' %}">
+      <div class="container pt-70 pb-50">
+        <!-- Section Content -->
+        <div class="section-content">
+          <div class="row"> 
+            <div class="col-md-12">
+              <h4 class="title text-white">Download</h4>
+              <ul class="breadcrumb white">
+                <li><a class="text-white" href="http://127.0.0.1:8000/immunitybooster/">Home</a></li>
+                <li class="active">Download</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Our Mission & Upcoming Events -->
+    <section>
+      <div class="container">
+        <div class="section-content">
+        <h2 class="text-uppercase font-weight-600 mt-10 font-28 line-bottom" style="margin-bottom:30px;">Download</h2>
+          <div class="row multi-row-clearfix">
+             {% for post in file %}
+            <div class="col-sm-6 col-md-3 col-lg-3">
+             
+              <div class="schedule-box maxwidth500 bg-lighter mb-30">
+                <div class="thumb">
+                  <img class="img-fullwidth" style="height:200px" alt="image nhi h" src="/media/{{post.image}}">
+                </div>
+                <div class="schedule-details clearfix p-15 pt-10">
+                  <h4 class="title mt-0">{{post.title}}</h4>
+                  
+                  <div class="clearfix"></div>
+                  <p class="mt-10">{{post.content| truncatechars:200}}</p>
+                  <div class="mt-10">
+                   <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="{{post.adminfile.url}}" download="{{post.adminfile.url}}" target="_blank">Download</a>
+                   <a href="{{post.adminfile.url}}" target="_blank" class="btn btn-dark btn-sm mt-10" type="application/pdf">Read</a>
+                   
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+             {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

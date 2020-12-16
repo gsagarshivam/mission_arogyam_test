@@ -1,0 +1,493 @@
+{% extends "heartcare/base.html" %}
+{% block title%}
+Heartcare | Mission Arogyam | BK Arogyam
+{% endblock %}
+{% block body %}
+{%load static %}
+<!-- Start main-content -->
+<div class="main-content">
+   <!-- Section: home -->
+   <section id="home">
+      <div class="container-fluid p-0">
+         <!-- Slider Revolution Start -->
+         <div class="rev_slider_wrapper">
+            <div class="rev_slider rev_slider_default" data-version="5.0">
+               <ul>
+                  {% for post in slider %}
+                  <li data-index="rs-1" data-transition="fade" data-slotamount="7" data-hideafterloop="0"
+                     data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+                     data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide 1"
+                     data-description="">
+                     <!-- MAIN IMAGE -->
+                     <img src="/media/{{post.image}}" alt=""
+                        data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"
+                        data-bgparallax="10" data-no-retina>
+                  </li>
+                  {% endfor %}
+                  <!-- SLIDE 2 -->
+               </ul>
+            </div>
+            <!-- end .rev_slider -->
+         </div>
+         <!-- end .rev_slider_wrapper -->
+
+         <h4></h4>
+         <p></p>
+         <div class="separator left">
+            <!-- <i class="fa fa-camera"></i> -->
+         </div>
+
+
+         <!-- Section: Brands  -->
+          <!-- Section: Brands  -->
+   <section id="services">
+      <div class="container pt-50 pb-50">
+         <div class="section-title text-center">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                  <h2 class="text-uppercase mt-0">Our <span class="text-theme-colored">Brands</span></h2>
+                  <p>
+                     Mission Arogyam provides wide range of Brands to docters  patients, and common people
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="row multi-row-clearfix">
+            <div class="col-md-12">
+               <div class="owl-carousel-4col" data-dots="true">
+                 {% for post in brand %}
+                  <div class="item">
+                     <div class="campaign bg-silver-light maxwidth500 mb-30">
+                        <div class="thumb">
+                           <img src="/media/{{post.image}}" alt="" class="img-fullwidth">
+                           <div class="campaign-overlay"></div>
+                        </div>
+                        <div class="campaign-details clearfix p-15">
+                           <h4 class="font-weight-500 mt-0"><a href="#">{{post.brand_title}}</a></h4>
+                           <p>{{post.desc}}</p>
+                           <div class="campaign-bottom clearfix">
+                              <a class="btn btn-xs btn-theme-colored font-weight-600 font-11 pull-left flip mt-10" href="/{{post.slug}}">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                      
+                  </div>
+               {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Divider: Funfact -->
+
+         <section class="divider parallax layer-overlay ooverlay-dark-6" data-bg-img="../static/images/bg/bg4.jpg"
+            data-parallax-ratio="0.7">
+            <div class="container pt-90 pb-90">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="col-md-12 text-center">
+                        <h2 class="text-white font-28">For Emergency<span class="text-theme-colored font-weight-600">
+                              Consulting</span> Please <span class="text-theme-colored font-weight-600"> Contact</span>
+                        </h2>
+                        <h3 class="font-30 text-white">+91 8081222333</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="bg-silver-light">
+            <div class="container pt-50">
+               <div class="section-title text-center">
+                  <div class="row">
+                     <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase mt-0">Our <span class="text-theme-colored">Disease</span></h2>
+                        <p>
+
+                              Your kidneys may be small, but they perform many vital functions that help
+                              maintain your overall health, including filtering waste and excess fluids from your blood.
+                              ious kidney disease may lead to complete kidney failure and the need for
+                              dialysis treatments or a kidney transplant to stay alive.
+                              While effective treatments are available for many kidney diseases, people are sometimes
+                              unaware that kidney disease can often be prevented.
+                              The following are the ten major causes of kidney disease.
+                           </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="section-content">
+                  <div class="row">
+                     {% for post in disease|slice:":6" %}
+                     <div class="col-md-4 col-sm-6">
+                        <div class="feturead mb-sm-30">
+                           <div class="thumb"> <img src="/media/{{post.image}}" class="img-fullwidth" alt=""> </div>
+                                 
+                           <div class="bg-white p-20">
+                              <h4 class="line-bottom text-uppercase font-weight-600 mt-0 mb-15">
+                              {{post.disease_name| truncatechars:20}}
+                              </h4>
+                              <p>
+                                 {{post.desc| truncatechars:150}}
+                                
+                              </p>
+                              <a class="btn btn-theme-colored btn-sm btn-flat" href="/kidneycare/disease/{{post.slug}}">Read More</a>
+                           </div>
+                        </div>
+                        
+                     </div>
+                     
+                     {% endfor %}
+
+                  </div>
+               </div>
+            </div>
+         </section>
+
+
+         <section class="divider parallax layer-overlay overlay-dark-6" data-bg-img="{% static 'images/bg/bg4.jpg' %}" data-parallax-ratio="0.7" style="background-image: url(&quot;images/bg/bg4.jpg&quot;); background-position: 50% -14px;">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-md-10 col-md-offset-1 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s;">
+                  <h2 class="font-36 text-uppercase text-white font-weight-600 mt-0">Be smart, help <span class="text-theme-colored">yourself now</span></h2>
+                   <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis totam, laudantium officia praesentium expedita omnis unde tempora beatae, modi, sequi quis. Est quas corporis, nobis aperiam cumque minima libero rem, itaque quo vitae odit?</p>
+               <div class="section-content">
+                  <div class="row">
+                     <div class="col-md-8 col-md-offset-2 text-center">
+                        <a href="https://youtu.be/8uNsBJ_BDcU" data-lightbox-gallery="youtube-video"><i class="fa fa-play-circle text-theme-colored font-72"></i>  
+                        </a>
+                     </div>
+                 </div>
+              </div>
+           
+            </div>
+          </div>
+         </div>
+         </section>
+ 
+         <!-- Section: blog -->
+
+         <!-- Section: Services -->
+         <section class="bg-silver-light">
+            <div class="container pt-50">
+               <div class="section-title text-center">
+                  <div class="row">
+                     <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase mt-0">Our <span class="text-theme-colored">Blogs</span></h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="section-content">
+                  <div class="row">
+                     {% for post in file|slice:":6" %}
+                     <div class="col-md-4 col-sm-6">
+                        <div class="feturead mb-sm-30">
+                           <div class="thumb"> <img src="/media/{{post.image}}" class="img-fullwidth" alt=""> </div>
+                                 
+                           <div class="bg-white p-20">
+                              <h4 class="line-bottom text-uppercase font-weight-600 mt-0 mb-15">{{post.title| truncatechars:26}}</h4>
+                              <p>
+                                 {{post.content2| truncatechars:150}}
+                              </p>
+                              <a class="btn btn-theme-colored btn-sm btn-flat" href="/heartcare/blog/{{post.slug}}">Read More</a>
+                           </div>
+                        </div>
+                        
+                     </div>
+                     
+                     {% endfor %}
+
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Divider: Divider -->
+         <section class="divider parallax layer-overlay overlay-dark-6" data-background-ratio="0.5"
+            data-bg-img="../static/images/bg/bg4.jpg">
+            <div class="container pt-60 pb-60">
+               <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                     <h2 class="line-bottom-center text-theme-colored text-center mt-0 mb-30">Our Customers Say</h2>
+                     <div class="owl-carousel-1col" data-dots="true">
+                        <div class="item">
+                           <div class="testimonial-wrapper text-center">
+                              <div class="thumb"><img class="img-circle" alt=""
+                                    src="../static/images/testimonials/1.png">
+                              </div>
+                              <div class="content pt-10">
+                                 <p class="font-15 text-white"><em>When he came to us he was suffering from extreme
+                                       nausea,
+                                       pain during urination, vomiting, weakness, swelling, and creatinine level was 9,
+                                       after
+                                       admitting with BK Arogyam his creatinine level reduced to 7.</em></p>
+                                 <i class="fa fa-quote-right font-36 mt-10 text-gray-lightgray"></i>
+                                 <h4 class="author text-theme-colored mb-0">Mr. Ram Dhani</h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="item">
+                           <div class="testimonial-wrapper text-center">
+                              <div class="thumb"><img class="img-circle" alt=""
+                                    src="../static/images/testimonials/2.png">
+                              </div>
+                              <div class="content pt-10">
+                                 <p class="font-15 text-white"><em>My Creatinine level was above 9. I was facing severe
+                                       symptoms like swelling in feet, pain during urination, color-changing of urine,
+                                       extreme
+                                       weakness, etc. When I heard about a homeopathy treatment, I went for it but the
+                                       Creatinine level increased to above 14. I went to BK Arogyam, admitted
+                                       immediately. My
+                                       case was critical but when our Ayurvedic treatment, medicine, and utmost care is
+                                       taken
+                                       at Arogyam center my Creatinine level reduced to 12, without having dialysis. Now
+                                       I am
+                                       very happy and satisfied.</em></p>
+                                 <i class="fa fa-quote-right font-36 mt-10 text-gray-lightgray"></i>
+                                 <h4 class="author text-theme-colored mb-0">Mr. Dharmanand Joshi</h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="item">
+                           <div class="testimonial-wrapper text-center">
+                              <div class="thumb"><img class="img-circle" alt=""
+                                    src="../static/images/testimonials/3.png">
+                              </div>
+                              <div class="content pt-10">
+                                 <p class="font-15 text-white"><em>My life had become hell with my illness. I was tired
+                                       of
+                                       taking allopathic treatment and getting no relief, after getting information
+                                       about B. K
+                                       Arogyam through social media, I decided to get a checkup from them. Just after
+                                       taking
+                                       the treatment for 10 days, the Creatinine level reduced from 2.6 to 2.4 and after
+                                       a
+                                       month the Creatinine level was reduced to 1.6 and after three months Creatinine
+                                       level
+                                       reduced to 1.07, which is considered as a normal Creatinine level, now I am
+                                       healthy,
+                                       happy and satisfied from B. K Arogyam.</em></p>
+                                 <i class="fa fa-quote-right font-36 mt-10 text-gray-lightgray"></i>
+                                 <h4 class="author text-theme-colored mb-0">Mrs. Anjaly Mehto</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+       
+         <!-- Section: blog -->
+          <section>
+            <div class="container">
+              <div class="section-content">
+                <div class="row multi-row-clearfix">
+                  {% for post in event %}
+                  <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="schedule-box maxwidth500 bg-lighter mb-30">
+                      <div class="thumb">
+                        <img class="img-fullwidth" alt="" src="/media/{{post.image}}">
+                      </div>
+                      <div class="schedule-details clearfix p-15 pt-10">
+                        <h4 class="title mt-0"><a href="#">{{post.evnet_title}}</a></h4>
+                        <ul class="list-inline font-11 text-gray">
+                          <li><i class="fa fa-calendar mr-5"></i>{{post.event_author}}</li>
+                          <li><i class="fa fa-map-marker mr-5"></i>{{post.pub_date}}</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <p class="mt-10">{{post.desc|truncatechars:200}}</p>
+                        <div class="mt-10">
+                         <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="/kidneycare/event/{{post.slug}}">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   {% endfor %}
+                </div>
+              </div>
+            </div>
+          </section>
+
+         <section class="clients bg-theme-colored">
+            <div class="container pt-0 pb-0">
+               <div class="row">
+                  <div class="col-md-12">
+                     <!-- Section: Clients -->
+                     <div class="owl-carousel-6col clients-logo transparent text-center">
+                        <div class="item"> <a href="#"><img src="{% static 'images/kidneycare/servicelogo/Bk cancer care.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href="http://127.0.0.1:8000/diabetescare/"><img src="{% static 'images/kidneycare/servicelogo/Bk diabetes care.png' %}" alt=""></a></div>
+
+                        
+
+                        <div class="item"> <a href="http://127.0.0.1:8000/kidneycare/"><img src="{% static 'images/kidneycare/servicelogo/Bk kidney care.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href="#"><img src="{% static 'images/kidneycare/servicelogo/immunity booster.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href="#"><img src="{% static 'images/kidneycare/servicelogo/Kaya mantra.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href=""><img src="{% static 'images/kidneycare/servicelogo/bk heart care logo.png' %}" alt=""></a></div>
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <script>
+            /**
+            * Do the clicking stuff
+            *
+            */
+
+            (function () {
+               var cards = document.querySelectorAll(".card.effect__click");
+               for (var i = 0, len = cards.length; i < len; i++) {
+                  var card = cards[i];
+                  clickListener(card);
+               }
+
+               function clickListener(card) {
+                  card.addEventListener("click", function () {
+                     var c = this.classList;
+                     c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+                  });
+               }
+            })();
+
+            /**
+            * Do the random stuff
+            *
+            */
+
+            (function () {
+
+               // cache vars
+               var cards = document.querySelectorAll(".card.effect__random");
+               var timeMin = 1;
+               var timeMax = 3;
+               var timeouts = [];
+
+               // loop through cards
+               for (var i = 0, len = cards.length; i < len; i++) {
+                  var card = cards[i];
+                  var cardID = card.getAttribute("data-id");
+                  var id = "timeoutID" + cardID;
+                  var time = randomNum(timeMin, timeMax) * 1000;
+                  cardsTimeout(id, time, card);
+               }
+
+               // timeout listener
+               function cardsTimeout(id, time, card) {
+                  if (id in timeouts) {
+                     clearTimeout(timeouts[id]);
+                  }
+                  timeouts[id] = setTimeout(function () {
+                     var c = card.classList;
+                     var newTime = randomNum(timeMin, timeMax) * 1000;
+                     c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+                     cardsTimeout(id, newTime, card);
+                  }, time);
+               }
+
+               // random number generator given min and max
+               function randomNum(min, max) {
+                  return Math.random() * (max - min) + min;
+               }
+
+            })();
+
+         </script>
+                  <script>
+            $(document).ready(function (e) {
+               var revapi = $(".rev_slider_default").revolution({
+                  sliderType: "standard",
+                  jsFileLocation: "js/revolution-slider/js/",
+                  sliderLayout: "auto",
+                  dottedOverlay: "none",
+                  delay: 5000,
+                  navigation: {
+                     keyboardNavigation: "off",
+                     keyboard_direction: "horizontal",
+                     mouseScrollNavigation: "off",
+                     onHoverStop: "off",
+                     touch: {
+                        touchenabled: "on",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                     },
+                     arrows: {
+                        style: "gyges",
+                        enable: true,
+                        hide_onmobile: false,
+                        hide_onleave: true,
+                        hide_delay: 200,
+                        hide_delay_mobile: 1200,
+                        tmp: '',
+                        left: {
+                           h_align: "left",
+                           v_align: "center",
+                           h_offset: 0,
+                           v_offset: 0
+                        },
+                        right: {
+                           h_align: "right",
+                           v_align: "center",
+                           h_offset: 0,
+                           v_offset: 0
+                        }
+                     },
+                     bullets: {
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_under: 800,
+                        style: "hebe",
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        h_align: "center",
+                        v_align: "bottom",
+                        h_offset: 0,
+                        v_offset: 30,
+                        space: 5,
+
+                        tmp: '<span class="tp-bullet-image" ></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title"></span>'
+                     }
+                  },
+                  responsiveLevels: [1240, 1024, 778],
+                  visibilityLevels: [1240, 1024, 778],
+                  gridwidth: [1170, 1024, 778, 480],
+                  gridheight: [680, 500, 400, 300],
+                  lazyType: "none",
+                  parallax: "mouse",
+                  parallaxBgFreeze: "off",
+                  parallaxLevels: [2, 3, 4, 5, 6, 7, 8, 9, 10, 1],
+                  shadow: 0,
+                  spinner: "off",
+                  stopLoop: "on",
+                  stopAfterLoops: 0,
+                  stopAtSlide: -1,
+                  shuffle: "off",
+                  autoHeight: "off",
+                  fullScreenAutoWidth: "off",
+                  fullScreenAlignForce: "off",
+                  fullScreenOffsetContainer: "",
+                  fullScreenOffset: "0",
+                  hideThumbsOnMobile: "off",
+                  hideSliderAtLimit: 0,
+                  hideCaptionAtLimit: 0,
+                  hideAllCaptionAtLilmit: 0,
+                  debugMode: false,
+                  fallbacks: {
+                     simplifyAll: "off",
+                     nextSlideOnWindowFocus: "off",
+                     disableFocusListener: false,
+                  }
+               });
+            });
+         </script>
+    
+      </div>
+      <!-- end main-content -->
+      {% endblock body %}

@@ -1,0 +1,100 @@
+{% extends "cancercare/base.html" %}
+{% block title%}
+Blogs | Mission Arogyam | BK Kidney Care
+{% endblock %}
+{% block body %}
+{% load static %}
+
+
+ <!-- Start main-content -->
+<div class="main-content">
+      <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="images/bg/bg1.jpg">
+      <div class="container pt-70 pb-50">
+        <!-- Section Content -->
+        <div class="section-content">
+          <div class="row"> 
+            <div class="col-md-12">
+              <h4 class="title text-white">{{post.evnet_title}}</h4>
+              <ul class="breadcrumb white">
+                <li><a class="text-white" href="index-mp-layout1.html">Home</a></li>
+                <li class="active">Events</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <h2>{{post.evnet_title}}</h2>
+            <div class="owl-carousel-1col" data-nav="true">
+              <div class="item">
+                <img src="/media/{{post.image}}" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-50">
+            <ul>
+              <li>
+                <h5>Topics:</h5>
+                <p>Children around the world are not enrolled in school</p>
+              </li>
+              <li>
+                <h5>Host:</h5>
+                <p>Kodesolution Lmd.</p>
+              </li>
+              <li>
+                <h5>Location:</h5>
+                <p>#405, Lan Streen, Los Vegas, USA</p>
+              </li>
+              <li>
+                <h5>Start Date:</h5>
+                <p>January 26, 2016</p>
+              </li>
+              <li>
+                <h5>End Date:</h5>
+                <p>February 10, 2016</p>
+              </li>
+              <li>
+                <h5>Website:</h5>
+                <p>kodesolution.com</p>
+              </li>
+              <li>
+                <h5>Share:</h5>
+                <div class="social-icons icon-sm icon-gray icon-circled">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mt-20">
+          <div class="col-md-6">
+            <h4 class="mt-0">{{post.evnet_title}}</h4>
+            <p>{{post.desc}}.</p>
+          </div>
+          <div class="col-md-6">
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante..</p>
+              <footer>{{post.event_author}}<cite title="Source Title"> {{post.pub_date}}</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+        
+    
+</div>
+<!-- end main-content -->
+
+
+
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+{% endblock body %}

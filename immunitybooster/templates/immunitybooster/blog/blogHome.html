@@ -1,0 +1,159 @@
+{% extends "immunitybooster/base.html" %}
+{% block title%}
+Blogs | Mission Arogyam | BK Kidney Care
+{% endblock %}
+{% block body %}
+{% load static %}
+
+
+ <!-- Start main-content -->
+  <div class="main-content">
+
+        <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{% static 'images/diabetes/blog/bg.jpg' %}">
+      <div class="container pt-70 pb-50">
+        <!-- Section Content -->
+        <div class="section-content">
+          <div class="row"> 
+            <div class="col-md-12">
+              <h4 class="title text-white">Blog</h4>
+              <ul class="breadcrumb white">
+                <li><a class="text-white" href="/immunitybooster/">Home</a></li>
+                <li class="active">Blog</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mt-30 mb-30 pt-30 pb-30">
+        <div class="row ">
+          <div class="col-md-9 pull-right flip sm-pull-none">
+             
+            <div class="blog-posts">
+              <div class="col-md-12">
+                 {% for post in allBlog %}
+                <div class="row list-dashed">
+
+                  <br>
+                  <br>
+                  
+                  <article class="post clearfix mb-30 bg-lighter">
+
+                    <div class="entry-header">
+                      <div class="post-thumb thumb"> 
+                        <img src="/media/{{post.image}}" alt="" class="img-responsive img-fullwidth"> 
+                      </div>
+                    </div>
+                    <div class="entry-content p-20 pr-10">
+                      <div class="entry-meta media mt-0 no-bg no-border">
+                        <div class="media-body pl-15">
+                          <div class="event-content pull-left flip">
+                            <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a href="/immunitybooster/blog/{{post.slug}}">{{post.title}}</a></h4>
+                            <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-commenting-o mr-5 text-theme-colored"></i>{{post.timeStamp}}</span>                       
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mt-10">{{post.content2| truncatechars:500}}</p>
+                      <a href="/immunitybooster/blog/{{post.slug}}" class="btn-read-more">Read more</a>
+                      <div class="clearfix"></div>
+                    </div>
+                  </article>
+                </div>
+                  {% endfor %}
+              </div>
+
+          
+
+
+
+              <div class="col-md-12">
+                <nav>
+                  <ul class="pagination theme-colored">
+                    <li> <a aria-label="Previous" href="#"> <span aria-hidden="true">«</span> </a> </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">...</a></li>
+                    <li> <a aria-label="Next" href="#"> <span aria-hidden="true">»</span> </a> </li>
+                  </ul>
+                </nav>
+              </div>
+             
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="sidebar sidebar-right mt-sm-30">
+              <div class="widget">
+                <h5 class="widget-title line-bottom">Blogs</h5>
+                <div class="owl-carousel-1col">
+                   <div class="item">
+                                    <img src="{% static 'images/kidneycare/diseases/slider/kidneystone.jpeg' %}" alt="">
+                                    <h4 class="title">Kidney stone</h4>
+                                    <p>
+                                        Kidney stones are hard deposits of minerals and acid salts that stick together in concentrated urine. They can be painful when passing through the urinary tract, but usually don't cause permanent damage.
+
+                                </p>
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/kidneycare/diseases/slider/uti.jpg' %}" alt="">
+                                    <h4 class="title">Urinary tract infections (UTIs)</h4>
+                                    <p>
+                                        Urinary tract infections are more common in women. They usually occur in the bladder or urethra, but more serious infections involve the kidney.
+
+                                        
+
+                                   </p>
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/kidneycare/diseases/slider/glu.jpg' %}" alt="">
+                                    <h4 class="title">Glomerulonephritis </h4>
+                                    <p>
+                                        Glomerulonephritis (gloe-mer-u-low-nuh-FRY-tis) is inflammation of the tiny filters in your kidneys (glomeruli). 
+                                    </p>
+                                </div>
+                </div>
+              </div>
+              <div class="widget">
+                <h5 class="widget-title line-bottom">Blogs Category</h5>
+                <ul class="list-divider list-border list check">
+                  <li><a href="#">Kidney Diseases</a></li>
+                  <li><a href="#">Diabetes Problem</a></li>
+                  <li><a href="#">Skin Problem</a></li>
+                  <li><a href="#">Hair Fall Probelm</a></li>
+                  <li><a href="#">Digestion Problem</a></li>
+                  <li><a href="#">Urine Infection</a></li>
+                </ul>
+              </div>
+              <div class="widget">
+
+              </div>
+                        <div class="widget">
+                            <h5 class="widget-title line-bottom">Tags</h5>
+                            <div class="tags">
+                                <a href="http://127.0.0.1:8000/immunitybooster/">diabetes</a>
+                                <a href="#">disease</a>
+                                <a href="http://127.0.0.1:8000/heartcare/blog/">blog</a>
+                                <a href="http://127.0.0.1:8000/heartcare/product/">product</a>
+                                <a href="http://127.0.0.1:8000/heartcare/video/">videos</a>
+                                <a href="https://bkarogyam.com/careers">careers</a>
+                                <a href="http://127.0.0.1:8000/heartcare/contactus/">contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end main-content -->
+
+
+
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+{% endblock body %}

@@ -1,0 +1,527 @@
+{% extends "arogyam/base.html" %} 
+{% block title%}
+Home | Mission Arogyam | BK Arogyam
+{% endblock %}
+{% block body %}
+{% load static %}
+<!-- Start main-content -->
+<div class="main-content">
+   <!-- Section: home -->
+   <section id="home">
+      <div class="container-fluid p-0" >
+         <!-- Slider Revolution Start -->
+         <div class="rev_slider_wrapper" >
+            <div class="rev_slider rev_slider_default" data-version="5.0" >
+               <ul>
+                {% for post in slider %}
+                  <li data-index="rs-1" data-transition="fade" data-slotamount="7" data-hideafterloop="0"
+                     data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+                     data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide 1"
+                     data-description="">
+                     <!-- MAIN IMAGE -->
+                     <img src="/media/{{post.image}}" alt=""
+                        data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"
+                        data-bgparallax="10" data-no-retina>
+                  </li>
+                  {% endfor %}
+                  
+               </ul>
+            </div>
+            <!-- end .rev_slider -->
+         </div>
+         <!-- end .rev_slider_wrapper -->
+    
+         <!-- Slider Revolution Ends -->
+      </div>
+   </section>
+   <!-- Divider: Call To Action  -->
+
+   <!-- Section: About -->
+   <section id="about">
+      <div class="container">
+         <div class="section-content">
+            <div class="section-title text-center">
+               <div class="row">
+                  <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                     <h2 class="text-uppercase mt-0">Why <span class="text-theme-colored">Mission Arogyam</span> is Unique</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row" style="margin-top:30px">
+              {% for post in fliper %}
+               <div class="col-md-4" style="margin-top:30px">
+                  <div class="card effect__hover" data-id="1">
+                     <div class="card__front bg-theme-colored">
+                        <div class="card__text">
+                           <div class="display-table-parent">
+                              <div class="display-table">
+                                 <div class="display-table-cell">
+                                    <div class="icon-box mb-0">
+                                       <a href="#" class="icon mb-0">
+                                       <img src="/media/{{post.image}}">
+                                       </a>
+                                       <h3 class="icon-box-title text-uppercase text-white">{{post.fliper_title}}</h3>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card__back" data-bg-color="#e0e0e0" style="background: rgb(224, 224, 224) !important;">
+                        <div class="card__text">
+                           <div class="display-table-parent p-30">
+                              <div class="display-table">
+                                 <div class="display-table-cell">
+                                    <h4 class="text-uppercase">{{post.fliper_title}}</h4>
+                                    <p>{{post.desc}}</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /card -->
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Section: Services -->
+   <section id="services">
+      <div class="container pt-50 pb-50">
+         <div class="section-title text-center">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                  <h2 class="text-uppercase mt-0">Our <span class="text-theme-colored">Services</span></h2>
+                  <p>
+                     Mission Arogyam provides wide range of services to doctors, patients, and common people.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="row multi-row-clearfix">
+            <div class="col-md-12">
+             
+               <div class="owl-carousel-4col" data-dots="true">
+                 {% for post in service %}
+                  <div class="item">
+                     <div class="campaign bg-silver-light maxwidth500 mb-30">
+                        <div class="thumb">
+                           <img src="/media/{{post.image}}" alt="" class="img-fullwidth">
+                           <div class="campaign-overlay"></div>
+                        </div>
+                        <div class="campaign-details clearfix p-15">
+                           <h4 class="font-weight-500 mt-0"><a href="#">{{post.service_title}}</a></h4>
+                           <p>{{post.desc}}</p>
+                           <div class="campaign-bottom clearfix">
+                              <a class="btn btn-xs btn-theme-colored font-weight-600 font-11 pull-left flip mt-10" href="/{{post.slug}}">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                      
+                  </div>
+               {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Divider: Divider -->
+   <section class="divider parallax layer-overlay ooverlay-dark-6" data-bg-img="{% static 'images/missionarogyam/background/bg4.jpg' %}" data-parallax-ratio="0.7">
+      <div class="container pt-90 pb-90">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="col-md-12 text-center">
+                  <h2 class="text-white font-28">For Emergency<span class="text-theme-colored font-weight-600"> Consulting</span> Please <span class="text-theme-colored font-weight-600"> Contact</span></h2>
+                  <h3 class="font-30 text-white">+91 8081222333</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Section: Brands  -->
+   <section id="services">
+      <div class="container pt-50 pb-50">
+         <div class="section-title text-center">
+            <div class="row">
+               <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                  <h2 class="text-uppercase mt-0">Our <span class="text-theme-colored">Brands</span></h2>
+                  <p>
+                     Mission Arogyam provides wide range of Brands to docters  patients, and common people
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="row multi-row-clearfix">
+            <div class="col-md-12">
+               <div class="owl-carousel-4col" data-dots="true">
+                 {% for post in brand %}
+                  <div class="item">
+                     <div class="campaign bg-silver-light maxwidth500 mb-30">
+                        <div class="thumb">
+                           <img src="/media/{{post.image}}" alt="" class="img-fullwidth">
+                           <div class="campaign-overlay"></div>
+                        </div>
+                        <div class="campaign-details clearfix p-15">
+                           <h4 class="font-weight-500 mt-0"><a href="#">{{post.brand_title}}</a></h4>
+                           <p>{{post.desc}}</p>
+                           <div class="campaign-bottom clearfix">
+                              <a class="btn btn-xs btn-theme-colored font-weight-600 font-11 pull-left flip mt-10" href="/{{post.slug}}">Read More</a>
+                           </div>
+                        </div>
+                     </div>
+                      
+                  </div>
+               {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Divider: Funfact -->
+   <section class="divider parallax layer-overlay overlay-dark-6" data-bg-img="{% static 'images/missionarogyam/background/bg4.jpg' %}" data-parallax-ratio="0.7">
+      <div class="container pt-90 pb-90">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+               <div class="funfact text-center">
+                  <i class="pe-7s-smile mt-5 text-white"></i>
+                  <h2 data-animation-duration="2000" data-value="754" class="animate-number text-theme-colored font-42 font-weight-500 mt-0 mb-0">0</h2>
+                  <h5 class="text-white text-uppercase font-weight-600">Happy Clients</h5>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+               <div class="funfact text-center">
+                  <i class="pe-7s-rocket mt-5 text-white"></i>
+                  <h2 data-animation-duration="2000" data-value="675" class="animate-number text-theme-colored font-42 font-weight-500 mt-0 mb-0">0</h2>
+                  <h5 class="text-white text-uppercase font-weight-600">Success Story</h5>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+               <div class="funfact text-center">
+                  <i class="pe-7s-add-user mt-5 text-white"></i>
+                  <h2 data-animation-duration="2000" data-value="248" class="animate-number text-theme-colored font-42 font-weight-500 mt-0 mb-0">0</h2>
+                  <h5 class="text-white text-uppercase font-weight-600">Our Counselor</h5>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+               <div class="funfact text-center">
+                  <i class="pe-7s-global mt-5 text-white"></i>
+                  <h2 data-animation-duration="2000" data-value="24" class="animate-number text-theme-colored font-42 font-weight-500 mt-0 mb-0">0</h2>
+                  <h5 class="text-white text-uppercase font-weight-600">Service Points</h5>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+      <!-- Section: Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-7 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+              <h3 class="text-uppercase title line-bottom mt-0 mb-30"><i class="fa fa-calendar text-gray-darkgray mr-10"></i>About <span class="text-theme-colored">Mission Arogyam</span></h3>
+              <!-- Portfolio Gallery Grid -->
+
+              <div class="gallery-isotope grid-4 gutter-small clearfix" data-lightbox="gallery">
+                <!-- Portfolio Item Start -->
+                <div class="drop-caps colored-rounded mb-60">
+                  <p>Mission Arogyam is the dream project of our Institute BK Arogyam which is the most authentic name in the medical sector and was established 41 years ago in 1979. Mission Arogyam is developed with an aim of taking grassroots initiative for making positive changes in the lives of common people and helping them to be healthy by the means of pure Ayurveda. We aim to make people healthy with the rays of Ayurveda and eliminate Allopath.</p>
+                </div>
+                <div class="drop-caps colored-rounded mb-60">
+                  <p>Mission Arogyam provides wide range of services to doctors, patients, and common people. We are providing services and around all states of India and working with doctors, patients, educational institution and general public in order to provide them with permanent solution of all diseases and to prevent the diseases from reoccurring through Ayurveda. Mission Arogyam had concentrated on training in various sectors for awareness of importance of Ayurveda in our lives. Mission Arogyam believes in empowering its member with the opportunity to live their life healthy and on their own terms. With the motto of reading health and wealth, Mission Arogyam has continued to enrich the lives of everyone who is the part of the solution and those who believe in our products.</p>
+                </div>
+                <!-- Portfolio Item End -->
+              </div>
+              <!-- End Portfolio Gallery Grid -->
+              <br>
+              <br>
+            </div>
+
+            <div class="col-md-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+              <h3 class="text-uppercase title line-bottom mt-0 mb-30 mt-sm-40"><i class="fa fa-calendar text-gray-darkgray mr-10"></i>Client <span class="text-theme-colored">Testimonials</span></h3>
+
+              <div class="bxslider bx-nav-top" data-count="2">
+                <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
+                  <div class="testimonial pt-10">
+                    <div class="thumb pull-left mb-0 mr-0 pr-20">
+                      <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                    </div>
+                    <div class="ml-100 ">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                      <p class="author mt-10">- <span class="text-theme-colored">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
+                  <div class="testimonial pt-10">
+                    <div class="thumb pull-left mb-0 mr-0 pr-20">
+                      <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                    </div>
+                    <div class="ml-100 ">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                      <p class="author mt-10">- <span class="text-theme-colored">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
+                  <div class="testimonial pt-10">
+                    <div class="thumb pull-left mb-0 mr-0 pr-20">
+                      <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                    </div>
+                    <div class="ml-100 ">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                      <p class="author mt-10">- <span class="text-theme-colored">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
+                  <div class="testimonial pt-10">
+                    <div class="thumb pull-left mb-0 mr-0 pr-20">
+                      <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                    </div>
+                    <div class="ml-100 ">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                      <p class="author mt-10">- <span class="text-theme-colored">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
+                  <div class="testimonial pt-10">
+                    <div class="thumb pull-left mb-0 mr-0 pr-20">
+                      <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                    </div>
+                    <div class="ml-100 ">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                      <p class="author mt-10">- <span class="text-theme-colored">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
+                  <div class="testimonial pt-10">
+                    <div class="thumb pull-left mb-0 mr-0 pr-20">
+                      <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                    </div>
+                    <div class="ml-100 ">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                      <p class="author mt-10">- <span class="text-theme-colored">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section: event -->     
+          <section>
+            <div class="container">
+              <div class="section-content">
+                <div class="row multi-row-clearfix">
+                  {% for post in event %}
+                  <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="schedule-box maxwidth500 bg-lighter mb-30">
+                      <div class="thumb">
+                        <img class="img-fullwidth" alt="" src="/media/{{post.image}}">
+                      </div>
+                      <div class="schedule-details clearfix p-15 pt-10">
+                        <h4 class="title mt-0"><a href="#">{{post.evnet_title}}</a></h4>
+                        <ul class="list-inline font-11 text-gray">
+                          <li><i class="fa fa-calendar mr-5"></i>{{post.event_author}}</li>
+                          <li><i class="fa fa-map-marker mr-5"></i>{{post.pub_date}}</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <p class="mt-10">{{post.desc|truncatechars:200}}</p>
+                        <div class="mt-10">
+                         <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="/event/{{post.slug}}">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   {% endfor %}
+                </div>
+              </div>
+            </div>
+          </section>
+         <section class="clients bg-theme-colored">
+            <div class="container pt-0 pb-0">
+               <div class="row">
+                  <div class="col-md-12">
+                     <!-- Section: Clients -->
+                     <div class="owl-carousel-6col clients-logo transparent text-center">
+                        <div class="item"> <a href="#"><img src="{% static 'images/missionarogyam/servicelogo/Bk cancer care.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href="http://127.0.0.1:8000/diabetescare/"><img src="{% static 'images/missionarogyam/servicelogo/Bk diabetes care.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href="http://127.0.0.1:8000/kidneycare/"><img src="{% static 'images/missionarogyam/servicelogo/Bk kidney care.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href="#"><img src="{% static 'images/missionarogyam/servicelogo/immunity booster.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href="#"><img src="{% static 'images/missionarogyam/servicelogo/Kaya mantra.png' %}" alt=""></a></div>
+
+                        <div class="item"> <a href=""><img src="{% static 'images/missionarogyam/servicelogo/Bk heart care.png' %}" alt=""></a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      <script>
+      /**
+      * Do the clicking stuff
+      *
+      */
+      
+      (function() {
+       var cards = document.querySelectorAll(".card.effect__click");
+       for ( var i  = 0, len = cards.length; i < len; i++ ) {
+         var card = cards[i];
+         clickListener( card );
+       }
+      
+       function clickListener(card) {
+         card.addEventListener( "click", function() {
+           var c = this.classList;
+           c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+         });
+       }
+      })();
+      
+      /**
+      * Do the random stuff
+      *
+      */
+      
+      (function() {
+      
+       // cache vars
+       var cards = document.querySelectorAll(".card.effect__random");
+       var timeMin = 1;
+       var timeMax = 3;
+       var timeouts = [];
+      
+       // loop through cards
+       for ( var i = 0, len = cards.length; i < len; i++ ) {
+         var card = cards[i];
+         var cardID = card.getAttribute("data-id");
+         var id = "timeoutID" + cardID;
+         var time = randomNum( timeMin, timeMax ) * 1000;
+         cardsTimeout( id, time, card );
+       }
+      
+       // timeout listener
+       function cardsTimeout( id, time, card ) {
+         if (id in timeouts) {
+           clearTimeout(timeouts[id]);
+         }
+         timeouts[id] = setTimeout( function() {
+           var c = card.classList;
+           var newTime = randomNum( timeMin, timeMax ) * 1000;
+           c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+           cardsTimeout( id, newTime, card );
+         }, time );
+       }
+      
+       // random number generator given min and max
+       function randomNum( min, max ) {
+         return Math.random() * (max - min) + min;
+       }
+      
+      })();
+      
+   </script>
+
+        <script>
+            $(document).ready(function(e) {
+              var revapi = $(".rev_slider_default").revolution({
+                sliderType:"standard",
+                jsFileLocation: "js/revolution-slider/js/",
+                sliderLayout: "auto",
+                dottedOverlay: "none",
+                delay: 5000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "on",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    },
+                    arrows: {
+                        style: "gyges",
+                        enable: true,
+                        hide_onmobile: false,
+                        hide_onleave: true,
+                        hide_delay: 200,
+                        hide_delay_mobile: 1200,
+                        tmp: '',
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 0,
+                            v_offset: 0
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 0,
+                            v_offset: 0
+                        }
+                    },
+                      bullets: {
+                      enable: true,
+                      hide_onmobile: true,
+                      hide_under: 800,
+                      style: "hebe",
+                      hide_onleave: false,
+                      direction: "horizontal",
+                      h_align: "center",
+                      v_align: "bottom",
+                      h_offset: 0,
+                      v_offset: 30,
+                      space: 5,
+                      
+                      tmp: '<span class="tp-bullet-image" ></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title"></span>'
+                  }
+                },
+                responsiveLevels: [1240, 1024, 778],
+                visibilityLevels: [1240, 1024, 778],
+                gridwidth: [1170, 1024, 778, 480],
+                gridheight:[680, 500, 400, 300],
+                lazyType: "none",
+                parallax:"mouse",
+                parallaxBgFreeze:"off",
+                parallaxLevels:[2,3,4,5,6,7,8,9,10,1],
+                shadow: 0,
+                spinner: "off",
+                stopLoop: "on",
+                stopAfterLoops: 0,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                fullScreenAutoWidth: "off",
+                fullScreenAlignForce: "off",
+                fullScreenOffsetContainer: "",
+                fullScreenOffset: "0",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                }
+              });
+            });
+         </script>
+</div>
+<!-- end main-content -->
+{% endblock body %}

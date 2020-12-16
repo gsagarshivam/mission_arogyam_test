@@ -1,0 +1,178 @@
+{% extends "cancercare/base.html" %}
+{% block title%}
+cancercare | Mission Arogyam | BK Kidney Care
+{% endblock %}
+{% block body %}
+{% load static %}
+
+
+<!-- Start main-content -->
+<div class="main-content">
+
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5"
+        data-bg-img="/media/{{post.image}}">
+        <div class="container pt-70 pb-50">
+
+
+            <!-- Section Content -->
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12">
+              <h4 class="title text-white">{{post.title}}</h4>
+              <ul class="breadcrumb white">
+                <li><a class="text-white" href="/cancercare/">Home</a></li>
+                <li> <a class="text-white"href="/cancercare/blog/">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Services -->
+    <section>
+        <div class="container">
+            <div class="row mtli-row-clearfix">
+                <div class="col-sm-6 col-md-8 col-lg-8">
+                    <div class="campaign bg-silver-light maxwidth500 mb-30">
+                        <div class="thumb">
+                            <img src="/media/{{post.image}}" alt="" class="img-fullwidth">
+                            <div class="campaign-overlay"></div>
+                        </div>
+                        <div class="campaign-details clearfix p-15 pt-10 pb-10">
+                            <h5 class="text-theme-colored font-weight-500 mb-0">cancercare</h5>
+                            <h4 class="font-weight-700 mt-0"><a href="#">{{post.title}}
+                            </a></h4>
+                            <p>{{post.content2}}
+                               
+                            </p>
+                            <div class="campaign-bottom border-top clearfix mt-20">
+                                <ul class="list-inline font-weight-600 pull-left flip pr-0 mt-10">
+                                    <li class="text-gray pr-0 mr-5">Date: <span class="text-theme-colored">{{post.timeStamp}}</span>
+                                    </li>
+                            
+                                </ul>
+                                <a class="btn btn-xs btn-theme-colored font-weight-600 font-11 pull-right flip mt-10"
+                                    href="#">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <p class="mb-20 mt-20"><strong>
+                             </strong>
+                        </p>
+                        <div class="pull-left flip mr-15">
+                            <img alt="" src="images/photos/1.jpg">
+                        </div>
+                        <div class="">
+                            <h2>{{post.title2}}</h2>
+                            <p class="mb-15">{{post.content|safe}}
+
+
+                        </div>
+
+                        
+                    </div>
+   
+                         
+                          
+                </div>
+                       
+
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="sidebar sidebar-right mt-sm-30">
+                        <div class="widget">
+                            <h5 class="widget-title line-bottom">Our Services</h5>
+                            <ul class="list-divider list-border list check">
+                                <li><a class="text-theme-colored"
+                                        href="page-services-relationship-problems.html"> 
+                                <li><a href="http://127.0.0.1:8000/kidneycare/">Kidney Care</a></li>
+                                <li><a href="http://127.0.0.1:8000/kidneycare/">BK Diabities care</a></li>
+                                <li><a href="#">BK Cancer Care</a></li>
+                                <li><a href="#">BK Immunity Booster Care</a></li>
+                                <li><a href="#">BK Heart Care</a></li>
+                                <li><a href="#">Kaya Mantra</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget">
+                            <h5 class="widget-title line-bottom">Watch Your Disease</h5>
+                            <div class="owl-carousel-1col">
+                                <div class="item">
+                                    <img src="{% static 'images/diabetes/diseases/diabetes1.png' %}" alt="">
+                                    <h4 class="title">Diabetes Type-2</h4>
+                                    <p>It's the most common form of diabetes. Type 2 means that your body doesn't use insulin properly. And while some people can control their blood sugar levels with healthy eating and exercise, others may need medication or insulin to manage it.</p>
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/diabetes/diseases/diabetes2.png' %}" alt="">
+                                    <h4 class="title">Diabetes Symptoms</h4>
+                                    <p>
+                                        <li>Urinating often.</li>
+                                        <li>Feeling very thirsty.</li>
+                                        <li>Feeling very hungry—even though you are eating.</li>
+                                        <li>Extreme fatigue.</li>
+                                        </p>
+                                </div>
+                                <div class="item">
+                                    <img src="{% static 'images/diabetes/diseases/diabetes3.png' %}" alt="">
+                                    <h4 class="title"> What are the early signs of diabetes?</h4>
+                                    <p>
+                                        <li>Frequent urination.</li>
+                                        <li>Increased thirst.</li>
+                                        <li>Always feeling hungry. </li>
+                                        <li>Feeling very tired.</li>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget">
+                            <h5 class="widget-title line-bottom">Tags</h5>
+                            <div class="tags">
+                                <a href="http://127.0.0.1:8000/kidneycare/">kidneycare</a>
+                                <a href="#">disease</a>
+                                <a href="http://127.0.0.1:8000/kidneycare/blog/">blog</a>
+                                <a href="http://127.0.0.1:8000/kidneycare/product/">product</a>
+                                <a href="http://127.0.0.1:8000/kidneycare/video/">videos</a>
+                                <a href="https://bkarogyam.com/careers">careers</a>
+                                <a href="http://127.0.0.1:8000/kidneycare/contactus/">contact</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- Divider: Clients -->
+    <section class="clients bg-theme-colored">
+        <div class="container pt-0 pb-0">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Section: Clients -->
+                    <div class="owl-carousel-6col clients-logo transparent text-center">
+                        <div class="item"> <a href="#"><img src="images/clients/w1.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w2.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w3.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w4.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w5.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w6.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w3.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w4.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w5.png" alt=""></a></div>
+                        <div class="item"> <a href="#"><img src="images/clients/w6.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- end main-content -->
+
+
+
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+{% endblock body %}
